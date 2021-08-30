@@ -14,7 +14,7 @@ public class BookService implements IBookService {
 
     @Override
     public boolean isBookItemAvailable(String bookId) {
-        List<BookItem> bookItemList = bookRepository.getBookItemsForBook(bookId)!=null);
+        List<BookItem> bookItemList = bookRepository.getBookItemsForBook(bookId);
         for(BookItem bookItem : bookItemList) {
             if(bookItem.getBookItemStatus().equals(BookItemStatus.AVAILABLE)) {
                 return true;
@@ -25,7 +25,7 @@ public class BookService implements IBookService {
 
     @Override
     public BookItem getBookItem(String bookId) {
-        List<BookItem> bookItemList = bookRepository.getBookItemsForBook(bookId)!=null);
+        List<BookItem> bookItemList = bookRepository.getBookItemsForBook(bookId);
         for(BookItem bookItem : bookItemList) {
             if(bookItem.getBookItemStatus().equals(BookItemStatus.AVAILABLE)) {
                 return bookItem;
